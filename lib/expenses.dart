@@ -22,26 +22,30 @@ class _ExpensesState extends State<Expenses> {
     );
   }
 
-  void _addExpense(Expense expense){
+  void _addExpense(Expense expense) {
     setState(() {
       _registerdExpenses.add(expense);
+      // Sort by date descending (latest first)
+      _registerdExpenses.sort((a, b) => b.date.compareTo(a.date));
     });
   }
+
 
   void _removeExpense(Expense expense){
     setState(() {
       _registerdExpenses.remove(expense);
     });
   }
-
   double get totalWeeklyExpenses {
     final now = DateTime.now();
-    final weekStart = now.subtract(Duration(days: now.weekday - 1));
+    final sevenDaysAgo = now.subtract(const Duration(days: 7));
 
     return _registerdExpenses
-        .where((expense) => expense.date.isAfter(weekStart))
-        .fold(0, (sum, expense) => sum + expense.amount);
+        .where((expense) => expense.date.isAfter(sevenDaysAgo))
+        .fold(0.0, (sum, expense) => sum + expense.amount);
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +81,7 @@ class _ExpensesState extends State<Expenses> {
             child: Column(
               children: [
                 Text(
-                  'This Week\'s Total',
+                  'Last 7 Day\'s Total',
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
                 const SizedBox(height: 8),
