@@ -1,16 +1,9 @@
-# expense_tracker
+# QuackTrack
 
-A new Flutter project.
+A minimalist, futuristic expense tracking app built with Flutter. Features a sleek dark theme with cyan accents. 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/68c1908b-fc57-4eea-9da1-d9d5c530437d" width="250" />
+  <img src="https://github.com/user-attachments/assets/063f40e7-94f7-42e9-8086-9d4ad360218f" width="250" />
+  <img src="https://github.com/user-attachments/assets/2950dc85-6c14-46df-ab15-89b086d1510a" width="250" />
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</p>
